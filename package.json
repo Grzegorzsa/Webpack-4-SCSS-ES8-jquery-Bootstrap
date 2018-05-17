@@ -1,0 +1,49 @@
+{
+  "name": "webpack-starter-scss-es8-jquery-bootstrap",
+  "version": "1.0.0",
+  "description": "Frontend starter: HTML + SCSS + ES8 + jQyery + Bootstrap 4, image optimisation, ESLing + stylelint config files",
+  "main": "",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "expose-loader": "^0.7.5",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "stylelint": "^9.2.1",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-scss": "^3.1.0",
+    "webpack": "^4.8.3",
+    "webpack-clean": "^1.2.1",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --mode development --open",
+    "devtest": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "webpack",
+    "scss",
+    "css"
+  ],
+  "author": "Grzegorz Sarzyński",
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "indentation": 2,
+    "declaration-block-trailing-semicolon": "always",
+    "block-closing-brace-newline-before": "always",
+    "block-opening-brace-newline-after": "always"
+  }
+}
