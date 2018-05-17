@@ -21,9 +21,6 @@ module.exports = (env, options) => {
     output: {
       filename: './js/[name].js',
     },
-    externals: {
-      jquery: 'jQuery',
-    },
     module: {
       rules: [
         {
@@ -105,9 +102,7 @@ module.exports = (env, options) => {
       }),
       new MiniCssExtractPlugin({
         filename: './css/[name].[hash].css',
-        chunkFilename: '[id].css',
       }),
     ],
   };
 };
-
