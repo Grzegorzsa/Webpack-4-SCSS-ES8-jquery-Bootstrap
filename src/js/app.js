@@ -1,2 +1,2 @@
-console.log('Hello from javascript');
-$('.rounded-circle').fadeOut(2000);
+const sayHello = name => `Hello from ${name}`;
+console.log(sayHello('John'));
