@@ -1,7 +1,7 @@
 {
   "name": "webpack-starter-scss-es8-jquery-bootstrap",
   "version": "1.0.0",
-  "description": "Frontend starter: HTML + SCSS + ES8 + jQyery + Bootstrap 4, image optimisation, ESLing + stylelint config files",
+  "description": "Frontend starter: HTML + SCSS + ES8 + jQyery + Bootstrap 4, image optimization, ESLing + stylelint config files",
   "main": "",
   "dependencies": {
     "bootstrap": "^4.1.1",
