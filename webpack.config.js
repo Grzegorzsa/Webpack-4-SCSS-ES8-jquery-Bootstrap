@@ -46,7 +46,12 @@ module.exports = (env, options) => {
         {
           test: /\.(css|sass|scss)$/,
           use: [
-            MiniCssExtractPlugin.loader,
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: '../',
+              },
+            },
             devMode ? 'css-loader' : { loader: 'css-loader', options: { minimize: true } },
             'sass-loader',
           ],
@@ -58,8 +63,6 @@ module.exports = (env, options) => {
               loader: 'html-loader',
               options: {
                 minimize: true,
-                name: './css/[name].[hash].[ext]',
-                context: '',
               },
             }],
         },
@@ -69,7 +72,7 @@ module.exports = (env, options) => {
             {
               loader: 'file-loader',
               options: {
-                name: './img/[name].[hash].[ext]',
+                name: 'img/[name].[hash].[ext]',
                 context: '',
               },
             },
@@ -100,11 +103,11 @@ module.exports = (env, options) => {
     plugins: [
       new CleanWebpackPlugin(['dist']),
       new HtmlWebPackPlugin({
-        template: './src/index.html',
-        filename: './index.html',
+        template: 'src/index.html',
+        filename: 'index.html',
       }),
       new MiniCssExtractPlugin({
-        filename: './css/[name].[hash].css',
+        filename: 'css/[name].[hash].css',
       }),
     ],
   };
