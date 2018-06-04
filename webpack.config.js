@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require("path");
 
 module.exports = (env, options) => {
   const devMode = options.mode === 'development';
@@ -19,7 +20,9 @@ module.exports = (env, options) => {
       ],
     },
     output: {
-      filename: './js/[name].js',
+      path: path.resolve(__dirname, './dist'),
+      filename: 'js/[name].[hash].js',
+      publicPath: '/',
     },
     module: {
       rules: [
@@ -49,7 +52,7 @@ module.exports = (env, options) => {
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                publicPath: '../',
+                publicPath: '/',
               },
             },
             devMode ? 'css-loader' : { loader: 'css-loader', options: { minimize: true } },
